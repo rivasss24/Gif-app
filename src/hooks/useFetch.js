@@ -1,25 +1,20 @@
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 const useFetch = ( url ) => {
 
+    const isMounted = useRef(true);
+    console.log('El useFetch esta montado',isMounted);
+
     const [ state, setState ] = useState({
-    //data:[],
     data: [],
     loading: true,
     });
 
     useEffect(() => {
-
-        /*setState({
-            data: null,
-            loading: false,
-            error: null
-        })*/
       
         fetch( url )
         .then( resp =>{
-        //Es importante especificar cual es el return
             return resp.json()
         })
         .then( ({ data }) =>{
@@ -32,10 +27,15 @@ const useFetch = ( url ) => {
             }
         });
 
+
+        if(isMounted){
+
         setState({
             data:[gifs],
             loading: false
-        })
+        })}
+
+        console.log("Termino la busqueda");
 
         } );
         

@@ -28,10 +28,15 @@ hr{
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-family: 'VT323', monospace;
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin: 0;
+  color: #F8FF01;
 }
 /* Powerd By */
 h2 p{
+  margin: 0;
   display: inline-block;
   font-size: 10px;
   color: rgba(128, 128, 128, 0.486);
@@ -43,41 +48,6 @@ h3 {
   margin-bottom: 15px;
 }
 
-/*.card-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  align-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
-  display: flex;
-  flex-direction: column;
-  height: 0%;  
-  justify-content: center;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  overflow: hidden;
-}
-
-.card p {
-  background-color: white;
-  flex: 1;
-  font-size: 1.5rem;
-  margin-top: 5px;
-  padding: 5px 20px 0px 20px;
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-}
-*/
 
 .gif-expert-app{
   margin-bottom: 15px;
@@ -107,7 +77,11 @@ h3 {
   /*background: #94ebe0;*/  
   margin:auto;
   /*color: rgb(123, 227, 212);*/
-  color: #00D8FF;
+  color: rgba(255, 255, 255, 0.739);
+  background-color: #21232a8f;
+  border-radius: 5px;
+  margin-left: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .gifgrid-button:hover{
@@ -115,7 +89,8 @@ h3 {
   height: 40px;
 
   /*color: rgb(91, 167, 155);*/
-  color: #0daac6;
+  
+  
 }
 
 .gifgrid-button:active{
@@ -200,7 +175,7 @@ h3 {
 
 .Activo span{
   background-color: rgba(0, 0, 0, 0.762);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -212,7 +187,7 @@ h3 {
 /*full-image*/
 .Activo img{
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -236,7 +211,7 @@ h3 {
 }*/
 
 .Activo .close-icon{
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   display: inline;
@@ -248,11 +223,70 @@ h3 {
   margin-right: 50px;
 }
 
+.Activo .close-icon:hover{
+  background-color: #21232a8f;
+  border-radius: 5px;
+}
+
 .Activo .title{
-  position: absolute;
+  color: rgba(255, 255, 255, 0.498);
+  position: fixed;
   bottom: 0%;
   left: 0;
   margin: 50px;
   z-index: 40;
   font-size: large;
+}
+
+.start-you-search{
+  height: 250px;
+  width: auto;
+  background-color: #75767b44;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/*.start-you-search p{
+
+}*/
+
+/* Loading */
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
 }
